@@ -1,6 +1,5 @@
 <?php
 require_once 'HTML/Template/ITX.php';
-require_once 'PHPUnit/Framework/TestCase.php';
 
 require_once 'ITTest.php';
 
@@ -11,12 +10,12 @@ function _uppercaseCallback($ary)
 
 class Callbacks
 {
-    function _lowercaseCallback($ary)
+    static function _lowercaseCallback($ary)
     {
         return strtolower($ary[0]);
     }
 
-    function _numberFormatCallback($float, $decimals)
+    static function _numberFormatCallback($float, $decimals)
     {
         return number_format($float, $decimals);
     }
@@ -24,7 +23,7 @@ class Callbacks
 
 class ITXTest extends ITTest
 {
-    function setUp()
+    function set_up()
     {
         $this->tpl = new HTML_Template_ITX(dirname(__FILE__) . '/templates');
     }
