@@ -35,7 +35,7 @@
     "include-path": [
         "./"
     ],
-    "license": "Modified BSD license",
+    "license": "BSD-3-Clause",
     "name": "pear/html_template_it",
     "support": {
         "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=HTML_Template_IT",
@@ -43,9 +43,10 @@
     },
     "type": "library",
     "require": {
-        "pear/pear_exception": "*"
+        "php": ">=5.6",
+        "pear/pear-core-minimal": "^1.10.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "yoast/phpunit-polyfills": "^2.0"
     }
 }

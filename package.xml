@@ -8,10 +8,16 @@ This engine works on the foundation of blocks and placeholders. It uses the hier
 There are two classes to use for templating. HTML_Template_IT is used for basic templating needs.  HTML_Template_ITX gives you full power over the templating engine, allowing blocks to be added, and function callbacks to be used.
  </description>
  <lead>
+  <name>Mathieu Dubois</name>
+  <user>duboism</user>
+  <email>mathieu.dubois@yahoo.com</email>
+  <active>yes</active>
+ </lead>
+ <lead>
   <name>Gregory Currie</name>
   <user>gregorycu</user>
   <email>gregorycu@php.net</email>
-  <active>yes</active>
+  <active>no</active>
  </lead>
  <lead>
   <name>Pierre-Alain Joye</name>
@@ -37,35 +43,19 @@ There are two classes to use for templating. HTML_Template_IT is used for basic 
   <email>ulf.wendel@phpdoc.de</email>
   <active>no</active>
  </developer>
- <date>2010-03-10</date>
- <time>17:00:00</time>
+ <date>2025-12-14</date>
  <version>
-  <release>1.3.0</release>
+  <release>1.3.3</release>
   <api>1.3.0</api>
  </version>
  <stability>
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license>Modified BSD license</license>
+ <license>BSD-3-Clause</license>
  <notes>
-Changes since last stable release (1.2.1):
-- Add support for pear package 2.0 format
-- Remove support for pear package 1.0 format
-- Fix bug #9501, doller signs disapear if preg_match is used.
-- Fix bug #9783, don&apos;t remove variable which values follow the variable pattern
-  To allow backwards compatbility an option preserve_input is added.
-  If it is false, the old behaviour will be used and therefore those values will be deleted.
-  Default is true, so new behaviour.
-- Fix bug #9853, problems with dots in placeholders or blocknames
-- Fix bug #13935, docblock is wrong
-- Fix bug #17129
-- Add option &apos;preserve_input&apos; to only remove unkown variable that were present
-  during setTemplate or loadTemplatefile
-  which is the behaviour before 1.3.0a1
-- Improved PHPCS (Request #15039)
-- Added unit tests
-- Fixed unit tests
+- PR #19: Declare property blockparents
+- PR #22: Add check_placeholder_exists option and setGlobalOptions method
  </notes>
  <contents>
   <dir name="/">
@@ -77,7 +67,6 @@ Changes since last stable release (1.2.1):
    <file name="HTML/Template/IT.php" role="php" />
    <file name="HTML/Template/ITX.php" role="php" />
    <file name="HTML/Template/IT_Error.php" role="php" />
-   <file name="tests/AllTests.php" role="test" />
    <file name="tests/ITTest.php" role="test" />
    <file name="tests/ITXTest.php" role="test" />
    <file name="tests/templates/addblock.html" role="test" />
@@ -85,7 +74,6 @@ Changes since last stable release (1.2.1):
    <file name="tests/templates/blocks.html" role="test" />
    <file name="tests/templates/bug_9853_01.tpl" role="test" />
    <file name="tests/templates/bug_9853_02.tpl" role="test" />
-   <file name="tests/templates/globals.html" role="test" />
    <file name="tests/templates/include.html" role="test" />
    <file name="tests/templates/loadtemplatefile.html" role="test" />
    <file name="tests/templates/placeholderreplacementscope.html" role="test" />
@@ -332,6 +320,54 @@ Changes since last stable release (1.2.1):
 - Fixed unit tests
    </notes>
   </release>
+  <release>
+   <version>
+   <release>1.3.1</release>
+   <api>1.3.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2018-01-22</date>
+   <license>BSD-3-Clause</license>
+   <notes>
+- PR #2: Fixes for deprecated code
+   </notes>
+  </release>
+  <release>
+   <version>
+   <release>1.3.2</release>
+   <api>1.3.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2024-11-24</date>
+   <license>BSD-3-Clause</license>
+   <notes>
+- PR  #5: Support for PHP 7.2
+- PR  #9: Remove unused code
+- PR #11: fix: Array and string offset access syntax with curly braces is no longer supported
+- PR #12: Remove PHP under 5.6 and add last versions of PHP 7
+   </notes>
+  </release>
+  <release>
+   <version>
+   <release>1.3.3</release>
+   <api>1.3.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2025-12-14</date>
+   <license>BSD-3-Clause</license>
+   <notes>
+- PR #19: Declare property blockparents
+- PR #22: Add check_placeholder_exists option and setGlobalOptions method
+   </notes>
+  </release>
  </changelog>
 </package>
-
